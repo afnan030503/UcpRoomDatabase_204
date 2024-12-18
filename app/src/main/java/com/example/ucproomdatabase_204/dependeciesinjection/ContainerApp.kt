@@ -9,15 +9,12 @@ import com.example.ucproomdatabase_204.repository.RepositoryDsn
 import com.example.ucproomdatabase_204.repository.RepositoryMk
 
 interface InterfaceContainerApp {
-    abstract fun LocalRepositoryMk(matakuliahDao: Any): LocalRepositoryMk
-
     val repositoryDsn: RepositoryDsn
     val repositoryMk: RepositoryMk
 }
 
 class ContainerApp(
-    private val context: Context
-) : InterfaceContainerApp{
+    private val context: Context) : InterfaceContainerApp {
     override val repositoryDsn: RepositoryDsn by lazy {
         LocalRepositoryDsn(AkademikDatabase.getDatabase(context).dosenDao())
     }
@@ -26,4 +23,5 @@ class ContainerApp(
     }
 
 }
+
 

@@ -13,9 +13,12 @@ class LocalRepositoryMk(
     }
     override fun getAllMk(): Flow<List<Matakuliah>> {
         return matakuliahDao.getAllMatakuliah()
-    }clas
+    }
     override fun getMk(nidn: String): Flow<Matakuliah>{
         return matakuliahDao.getMatakuliah(nidn)
+    }
+    override suspend fun deleteMk(matakuliah: Matakuliah){
+        matakuliahDao.deleteMatakuliah(matakuliah)
     }
     override suspend fun updateMk(matakuliah: Matakuliah){
         matakuliahDao.updateMatakuliah(matakuliah)

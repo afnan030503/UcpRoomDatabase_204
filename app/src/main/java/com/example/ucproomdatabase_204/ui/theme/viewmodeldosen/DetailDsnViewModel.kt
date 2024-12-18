@@ -61,7 +61,7 @@ class DetailDsnViewModel(
                 DetailUistate(
                     isLoading = false,
                     isError = true,
-                    errorMessage = it.message ?: "terjadi kesalahan"
+                    errorMessage = it.message ?: "terjadi kesalahan",
                 )
             )
         }
@@ -70,6 +70,6 @@ class DetailDsnViewModel(
             started = SharingStarted.WhileSubscribed(2000),
             initialValue = DetailUistate(
                 isLoading = true,
-            )
+            ),
         )
 }

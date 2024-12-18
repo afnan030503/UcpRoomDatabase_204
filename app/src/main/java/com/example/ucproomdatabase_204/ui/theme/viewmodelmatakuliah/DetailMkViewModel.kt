@@ -15,6 +15,7 @@ import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 
 
 data class DetailUiMState(
@@ -62,6 +63,15 @@ class DetailMkViewModel(
             started = SharingStarted.WhileSubscribed(2000),
             initialValue = DetailUiMState(
                 isLoading = true,
-            )
+            ),
         )
+    fun deleteMk(){
+        detailUiMState.value.detailUiMEvent.toMatakuliahEntity().let{
+            viewModelScope.launch {
+                repositoryMk.deleteMk(it)
+            }
+        }
+    }
 }
+
+fun Matakuliah.

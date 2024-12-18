@@ -74,4 +74,13 @@ class DetailMkViewModel(
     }
 }
 
-fun Matakuliah.
+fun Matakuliah.toDetailUiMEvent(): MatakuliahEvent{
+    return MatakuliahEvent(
+        kode = kode,
+        nama_mk = nama_mk,
+        sks = sks,
+        semester = semester,
+        jenis = jenis,
+        dosenpengampu = dosenpengampu
+    )
+}

@@ -16,6 +16,7 @@ import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 
 data class DetailUistate(
     val detailUiEvent: DosenEvent = Dosenevent(),
@@ -71,5 +72,4 @@ class DetailDsnViewModel(
                 isLoading = true,
             )
         )
-
 }

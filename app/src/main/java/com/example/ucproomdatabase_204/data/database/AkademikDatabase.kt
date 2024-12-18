@@ -14,7 +14,8 @@ import com.example.ucproomdatabase_204.data.entity.Matakuliah
 abstract class AkademikDatabase : RoomDatabase() {
 
     // Mendefinisikan fungsi DAO untuk masing-masing tabel
-    abstract fun mataKuliahDao(): MatakuliahDao
+    abstract fun matakuliahDao(): MatakuliahDao
+    abstract fun dosenDao(): DosenDao
 
     companion object {
         @Volatile

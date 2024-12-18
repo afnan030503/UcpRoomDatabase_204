@@ -15,6 +15,7 @@ abstract class KrsDatabase : RoomDatabase() {
 
     // Mendefinisikan fungsi DAO untuk masing-masing tabel
     abstract fun dosenDao(): DosenDao
+    abstract fun matakuliahDao(): MatakuliahDao
 
     companion object {
         @Volatile

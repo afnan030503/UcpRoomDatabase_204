@@ -10,12 +10,18 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.focusModifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.core.view.KeyEventDispatcher.Component
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.ucproomdatabase_204.ui.theme.costumwidget.cmtopBar
 import com.example.ucproomdatabase_204.ui.theme.viewmodeldosen.DetailDsnViewModel
@@ -73,6 +79,39 @@ fun BodyDetailDsn(
                 )
             }
         }
+    detailUistate.isUiEventEmpty -> {
+        Box(
+            modifier = modifier.fillMaxWidth(),
+            contentAlignment = Alignment.Center
+        ){
+            Text(
+                text = "Data tidak ditemukan",
+                modifier = Modifier.padding(16.dp)
+            )
+        }
+    }
+    }
+}
 
+@Composable
+fun ComponentDetailDsn(
+    modifier: Modifier = Modifier,
+    judul: String,
+    isinya: String,
+){
+    Column(
+        modifier = modifier.fillMaxWidth(),
+        horizontalAlignment = Alignment.Start
+    ) {
+        Text(
+            text = "$judul",
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.Gray
+        )
+        Text(
+            text = isinya, fontSize = 20.sp,
+            fontWeight = FontWeight.Bold
+        )
     }
 }

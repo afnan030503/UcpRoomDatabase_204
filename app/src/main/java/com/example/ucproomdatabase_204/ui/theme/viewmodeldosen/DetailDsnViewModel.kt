@@ -19,7 +19,7 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 data class DetailUistate(
-    val detailUiEvent: DosenEvent = Dosenevent(),
+    val detailUiEvent: DosenEvent = DosenEvent(),
     val isLoading: Boolean= false,
     val isError: Boolean= false,
     val errorMessage: String = ""

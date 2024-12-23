@@ -31,6 +31,8 @@ import com.example.ucproomdatabase_204.data.entity.Dosen
 import com.example.ucproomdatabase_204.ui.theme.costumwidget.cmtopBar
 import com.example.ucproomdatabase_204.ui.theme.viewmodeldosen.DetailDsnViewModel
 import com.example.ucproomdatabase_204.ui.theme.viewmodeldosen.DetailUistate
+import com.example.ucproomdatabase_204.ui.theme.viewmodeldosen.PenyediaDsnViewModel
+import com.example.ucproomdatabase_204.ui.theme.viewmodeldosen.toDosenEntity
 
 @Composable
 fun DetailDsnView(

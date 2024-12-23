@@ -25,6 +25,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.focusModifier
@@ -38,13 +39,15 @@ import com.example.ucproomdatabase_204.data.entity.Matakuliah
 import com.example.ucproomdatabase_204.ui.theme.costumwidget.cmtopBar
 import com.example.ucproomdatabase_204.ui.theme.viewmodelmatakuliah.DetailMkViewModel
 import com.example.ucproomdatabase_204.ui.theme.viewmodelmatakuliah.DetailUiMState
+import com.example.ucproomdatabase_204.ui.theme.viewmodelmatakuliah.PenyediaMkViewModel
+import com.example.ucproomdatabase_204.ui.theme.viewmodelmatakuliah.toMatakuliahEntity
 
 @Composable
 fun DetailMkView(
     modifier: Modifier = Modifier,
     viewModel: DetailMkViewModel = viewModel(factory = PenyediaMkViewModel.Factory),
     onBack : () -> Unit = { },
-    OnEditClick: (String) -> Unit = {},
+    onEditClick: (String) -> Unit = {},
     onDeleteClick: () -> Unit = {}
     ){
     Scaffold(
@@ -161,7 +164,7 @@ fun ComponentDetailMk(
             color = Color.Gray
         )
         Text(
-            text = isinya, fontWeight = 20.sp,
+            text = isinya, fontSize = 20.sp,
             fontWeight = FontWeight.Bold,
         )
     }

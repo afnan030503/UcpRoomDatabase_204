@@ -13,8 +13,7 @@ interface InterfaceContainerApp {
     val repositoryMk: RepositoryMk
 }
 
-class ContainerApp(
-    private val context: Context) : InterfaceContainerApp {
+class ContainerApp(private val context: Context) : InterfaceContainerApp {
     override val repositoryDsn: RepositoryDsn by lazy {
         LocalRepositoryDsn(AkademikDatabase.getDatabase(context).dosenDao())
     }

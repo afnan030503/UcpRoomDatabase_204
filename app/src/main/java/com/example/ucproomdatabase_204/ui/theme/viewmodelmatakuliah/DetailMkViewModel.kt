@@ -41,7 +41,7 @@ class DetailMkViewModel(
         .filterNotNull()
         .map {
             DetailUiMState(
-                detailUiMEvent = it.toDetailMatakuliah(),
+                detailUiMEvent = it.toDetailUiMEvent(),
                 isLoading = false,
             )
         }

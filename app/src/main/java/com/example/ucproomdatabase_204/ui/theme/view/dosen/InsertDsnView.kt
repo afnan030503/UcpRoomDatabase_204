@@ -29,6 +29,10 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.ucproomdatabase_204.ui.theme.costumwidget.cmtopBar
 import com.example.ucproomdatabase_204.ui.theme.navigation.AlamatNavigasi
+import com.example.ucproomdatabase_204.ui.theme.viewmodeldosen.DosenEvent
+import com.example.ucproomdatabase_204.ui.theme.viewmodeldosen.DosenViewModel
+import com.example.ucproomdatabase_204.ui.theme.viewmodeldosen.DsnUIState
+import com.example.ucproomdatabase_204.ui.theme.viewmodeldosen.FormErrorState
 import com.example.ucproomdatabase_204.ui.theme.viewmodeldosen.PenyediaDsnViewModel
 import kotlinx.coroutines.launch
 
@@ -39,9 +43,9 @@ fun InsertBodyDsn(
     uiState: DsnUIState,
     onClick: () -> Unit
 ){
-    Column(modifier = modifier.fillMaxWidth()),
-    verticalArrangment = Arrangement.Center,
-    horizontalAligment = Alignment.CenterHorizontally
+    Column(modifier = modifier.fillMaxWidth(),
+    verticalArrangement = Arrangement.Center,
+    horizontalAlignment = Alignment.CenterHorizontally)
     {
         FormDosen(
             dosenEvent = uiState.dosenEvent,
@@ -134,9 +138,9 @@ fun FormDosen(
 
         OutlinedTextField(
             modifier = Modifier.fillMaxWidth(),
-            value = DosenEvent.nama,
+            value = dosenEvent.nama,
             onValueChange = {
-                onValueChange(DosenEvent.copy(nama = it))
+                onValueChange(dosenEvent.copy(nama = it))
             },
             label = { Text("Nama") },
             isError = errorState.nama != null,

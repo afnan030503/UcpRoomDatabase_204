@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.ucproomdatabase_204"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.ucproomdatabase_204"
@@ -63,6 +63,7 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.navigation.runtime.ktx)
     implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.ui.test.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

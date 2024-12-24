@@ -3,8 +3,14 @@ package com.example.ucproomdatabase_204.ui.theme.navigation
 interface AlamatNavigasi{
     val route: String
 }
+object DestinasiMain {
+    const val route = "main_screen"
+}
 object DestinasiHome : AlamatNavigasi{
     override val route = "Home"
+}
+object DestinasiHomeMk : AlamatNavigasi{
+    override val route = "Home Matakuliah"
 }
 object DestinasiDetailDosen : AlamatNavigasi{
     override val route = "Detail"

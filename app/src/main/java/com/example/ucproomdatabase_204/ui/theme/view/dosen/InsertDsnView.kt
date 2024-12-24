@@ -43,9 +43,11 @@ fun InsertBodyDsn(
     uiState: DsnUIState,
     onClick: () -> Unit
 ){
-    Column(modifier = modifier.fillMaxWidth(),
-    verticalArrangement = Arrangement.Center,
-    horizontalAlignment = Alignment.CenterHorizontally)
+    Column(
+        modifier = modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    )
     {
         FormDosen(
             dosenEvent = uiState.dosenEvent,
@@ -98,7 +100,6 @@ fun InsertDsnView(
                 .padding(padding)
                 .padding(16.dp)
         ) {
-
             cmtopBar(
                 onBack = onBack,
                 showBackButton = true,
